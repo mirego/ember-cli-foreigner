@@ -1,6 +1,7 @@
 # ember-cli-foreigner
 
 [![Node package version](http://img.shields.io/npm/v/ember-cli-foreigner.svg)](http://img.shields.io/npm/v/ember-cli-foreigner.svg)
+[![Travis-CI status](http://img.shields.io/travis/mirego/ember-cli-foreigner.svg)](http://img.shields.io/travis/mirego/ember-cli-foreigner.svg)
 [![Code Climate](http://img.shields.io/codeclimate/github/mirego/ember-cli-foreigner.svg)](https://codeclimate.com/github/mirego/ember-cli-foreigner)
 
 `ember-cli-foreigner` is a set of helpers and mixins to interface with the [foreigner.js](https://github.com/mirego/foreigner.js) library in Ember.
