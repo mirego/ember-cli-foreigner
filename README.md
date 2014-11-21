@@ -65,22 +65,22 @@ And then you can define your placeholder like this:
 ### Installation
 
 - git clone this repository
-- npm install
-- bower install
+- `npm install`
+- `bower install`
 
 ### Running
 
-- ember server
+- `ember server`
 - Visit your app at http://localhost:4200.
 
 ### Running Tests
 
-- ember test
-- ember test --server
+- `ember test`
+- `ember test --server`
 
 ### Building
 
-- ember build
+- `ember build`
 
 For more information on using ember-cli, visit http://www.ember-cli.com/.
 
