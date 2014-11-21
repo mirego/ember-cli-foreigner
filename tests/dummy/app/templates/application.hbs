@@ -1,0 +1,20 @@
+<div id="key-lookup">
+  {{t 'acceptance_tests.key_lookup'}}
+</div>
+
+<div id="simple-interpolation">
+  {{t 'acceptance_tests.simple_interpolation' adjective='simple'}}
+</div>
+
+<div id="bound-interpolation">
+  {{t 'acceptance_tests.bound_interpolation' adjective=adjective}}
+</div>
+<button id="change-bound-interpolation" {{action 'changeAdjective'}}>Change</button>
+
+<div id="translate-attr" {{translate-attr title='acceptance_tests.translate_attr'}}></div>
+
+<div id="multiple-translated-attribute" {{translate-attr title='acceptance_tests.translate_attr' alt='acceptance_tests.translate_attr'}}></div>
+
+{{input id='translateable-attributes' placeholderTranslation='acceptance_tests.translateable_attributes'}}
+
+{{input id='inexistant-key' placeholderTranslation='acceptance_tests.inexistant_key'}}

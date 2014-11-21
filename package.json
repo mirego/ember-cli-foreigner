@@ -1,0 +1,43 @@
+{
+  "name": "ember-cli-foreigner",
+  "version": "0.0.1",
+  "directories": {
+    "doc": "doc",
+    "test": "tests"
+  },
+  "scripts": {
+    "start": "ember server",
+    "build": "ember build",
+    "test": "ember test"
+  },
+  "repository": "https://github.com/mirego/ember-cli-foreigner",
+  "engines": {
+    "node": ">= 0.10.0"
+  },
+  "author": "Charles Demers <cdemers@mirego.com>",
+  "license": "BSD 3-Clause",
+  "bugs": {
+    "url": "https://github.com/mirego/ember-cli-foreigner/issues"
+  },
+  "devDependencies": {
+    "body-parser": "^1.2.0",
+    "broccoli-asset-rev": "0.3.1",
+    "broccoli-ember-hbs-template-compiler": "^1.6.1",
+    "ember-cli": "0.1.2",
+    "ember-cli-inject-live-reload": "1.3.0",
+    "ember-cli-mocha": "0.1.4",
+    "ember-export-application-global": "1.0.0",
+    "express": "4.9.7",
+    "glob": "4.0.6"
+  },
+  "keywords": [
+    "ember-addon",
+    "translation",
+    "localization",
+    "locale",
+    "foreigner"
+  ],
+  "ember-addon": {
+    "configPath": "tests/dummy/config"
+  }
+}
