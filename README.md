@@ -1,20 +1,48 @@
 # ember-cli-foreigner
 
-[![Node package version](http://img.shields.io/npm/v/ember-cli-foreigner.svg)](http://img.shields.io/npm/v/ember-cli-foreigner.svg)
-[![Travis-CI status](http://img.shields.io/travis/mirego/ember-cli-foreigner.svg)](http://img.shields.io/travis/mirego/ember-cli-foreigner.svg)
-[![Code Climate](http://img.shields.io/codeclimate/github/mirego/ember-cli-foreigner.svg)](https://codeclimate.com/github/mirego/ember-cli-foreigner)
-
 `ember-cli-foreigner` is a set of helpers and mixins to interface with the [foreigner.js](https://github.com/mirego/foreigner.js) library in Ember.
+
+[![Node package version](http://img.shields.io/npm/v/ember-cli-foreigner.svg)](http://img.shields.io/npm/v/ember-cli-foreigner.svg) [![Travis-CI status](http://img.shields.io/travis/mirego/ember-cli-foreigner.svg)](http://img.shields.io/travis/mirego/ember-cli-foreigner.svg) [![Code Climate](http://img.shields.io/codeclimate/github/mirego/ember-cli-foreigner.svg)](https://codeclimate.com/github/mirego/ember-cli-foreigner)
 
 ## Setup
 
 ```bash
 npm install ember-cli-foreigner --save-dev
 ember g ember-cli-foreigner
+```
+
+### Adding a locale
+
+```bash
 ember g locale <locale>
 ```
 
+In your app’s `config/environment.js`, set the default locale:
+
+```js
+var ENV = {
+  APP: {
+    defaultLocale: '<locale>'
+  }
+};
+```
+
+### Changing the locales folder
+
+You can change the folder where the translations are put by setting the locale prefix:
+
+```
+var ENV = {
+  modulePrefix: 'your-app',
+  localePrefix: 'your-app/localizations'
+};
+```
+
+The path is relative to `modulePrefix` and is set to `locales` by default.
+
 ## Usage
+
+To see how to write your locale file, see the [foreigner.js README](https://github.com/mirego/foreigner.js)
 
 ### Translating text content
 
@@ -59,6 +87,24 @@ And then you can define your placeholder like this:
 
 ```hbs
 <a {{translate-attr title='link_title'}}>Link</a>
+```
+
+### Changing the locale
+
+The locale property is set on your app’s instance, so to change it you could do something like this in your `routes/application.js`:
+
+```js
+export default Ember.Route.extend({
+  actions: {
+    changeLocale: function(locale) {
+      var application = this.container.lookup('application:main');
+      application.set('locale', locale);
+
+      // Transitioning to any other route from here should render
+      // your templates with the new locale’s translations
+    }
+  }
+});
 ```
 
 ## Contributing

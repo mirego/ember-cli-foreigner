@@ -11,7 +11,7 @@ module.exports = function(environment) {
     },
 
     APP: {
-      locales: ['en']
+      defaultLocale: 'en'
     }
   };
 
