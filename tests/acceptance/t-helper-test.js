@@ -29,4 +29,13 @@ describe('Acceptance: `t` helper', function() {
       expect($('#bound-interpolation').text().trim()).to.equal('This is a bound interpolation.');
     });
   });
+
+  it('should output the correct translation after changing the locale', function() {
+    App.set('locale', 'fr');
+
+    visit('/not-found')
+    .visit('/').then(function() {
+      expect($('#key-lookup').text().trim()).to.equal('Ceci est une recherche de clé.');
+    });
+  });
 });

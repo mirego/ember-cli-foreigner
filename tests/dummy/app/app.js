@@ -13,6 +13,4 @@ var App = Ember.Application.extend({
 
 loadInitializers(App, config.modulePrefix);
 
-foreigner.locale = 'en';
-
 export default App;
