@@ -36,6 +36,8 @@ describe('Acceptance: `t` helper', function() {
     visit('/not-found')
     .visit('/').then(function() {
       expect($('#key-lookup').text().trim()).to.equal('Ceci est une recherche de clé.');
+
+      App.set('locale', 'en');
     });
   });
 });
