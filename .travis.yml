@@ -8,7 +8,6 @@ cache:
     - bower_components
 
 install:
-  - npm install -g bower@1.3.12 jshint@2.5.10
   - npm install
   - bower install
 

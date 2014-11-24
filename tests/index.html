@@ -11,7 +11,6 @@
     {{content-for 'test-head'}}
 
     <link rel="stylesheet" href="assets/vendor.css">
-    <link rel="stylesheet" href="assets/dummy.css">
     <link rel="stylesheet" href="assets/test-support.css">
     <style>
       #ember-testing-container {
@@ -31,11 +30,10 @@
     </style>
   </head>
   <body>
-    <div id="qunit"></div>
-    <div id="qunit-fixture"></div>
+    <div id="mocha"></div>
+    <div id="mocha-fixture"></div>
 
     {{content-for 'body'}}
-    {{content-for 'test-body'}}
 
     <script src="assets/vendor.js"></script>
     <script src="assets/test-support.js"></script>
