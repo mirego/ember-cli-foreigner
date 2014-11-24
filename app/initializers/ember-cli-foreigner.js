@@ -7,7 +7,7 @@ var LOCALE_PREFIX = config.localePrefix ? config.localePrefix.replace(config.mod
 
 var registerLibrary = function() {
   if (Ember.libraries) {
-    Ember.libraries.register('ember-cli-foreigner', '0.0.1');
+    Ember.libraries.register('ember-cli-foreigner', '0.0.2');
   }
 };
 
