@@ -9,7 +9,7 @@
     "ember-cli-shims": "stefanpenner/ember-cli-shims#0.0.3",
     "ember-cli-test-loader": "dgeb/ember-cli-test-loader#test-agnostic",
     "ember-load-initializers": "stefanpenner/ember-load-initializers#0.0.2",
-    "foreigner.js": "0.0.1",
+    "foreigner.js": "0.1.0",
     "mocha": "1.17.0",
     "chai": "1.9.1",
     "ember-mocha-adapter": "0.2.1",
