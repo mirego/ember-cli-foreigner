@@ -133,7 +133,7 @@ For more information on using ember-cli, visit http://www.ember-cli.com/.
 
 ## License
 
-`ember-cli-foreigner` is © 2014 [Mirego](http://www.mirego.com) and may be freely distributed under the [New BSD license](http://opensource.org/licenses/BSD-3-Clause).
+`ember-cli-foreigner` is © 2014-2015 [Mirego](http://www.mirego.com) and may be freely distributed under the [New BSD license](http://opensource.org/licenses/BSD-3-Clause).
 See the [`LICENSE.md`](https://github.com/mirego/ember-cli-foreigner/blob/master/LICENSE.md) file.
 
 ## About Mirego
