@@ -83,12 +83,6 @@ And then you can define your placeholder like this:
 {{input placeholderTranslation='form.input_placeholder'}}
 ```
 
-### Translate attributes on a plain tag
-
-```hbs
-<a {{translate-attr title='link_title'}}>Link</a>
-```
-
 ### Changing the locale
 
 The locale property is set on your app’s instance, so to change it you could do something like this in your `routes/application.js`:
