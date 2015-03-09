@@ -1,4 +1,5 @@
 /* jshint expr:true */
+
 import Ember from 'ember';
 import startApp from '../helpers/start-app';
 import TranslateableAttributes from 'ember-cli-foreigner/translateable-attributes';

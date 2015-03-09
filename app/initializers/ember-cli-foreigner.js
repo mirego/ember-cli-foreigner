@@ -1,6 +1,5 @@
 import Ember from 'ember';
 import t from '../helpers/t';
-import translateAttr from '../helpers/translate-attr';
 import config from '../config/environment';
 
 var LOCALE_PREFIX = config.localePrefix ? config.localePrefix.replace(config.modulePrefix + '/', '') : 'locales';
@@ -17,7 +16,6 @@ var loadLocale = function(app, locale) {
 
 var registerHelpers = function() {
   Ember.Handlebars.registerBoundHelper('t', t);
-  Ember.Handlebars.registerHelper('translate-attr', translateAttr);
 };
 
 var createLocaleProperty = function(app) {
