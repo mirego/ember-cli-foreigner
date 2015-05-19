@@ -1,7 +1,7 @@
 import Ember from 'ember';
 
 var translationMissing = function(keyPath) {
-  return 'translation missing: ' + foreigner.locale + '.' + keyPath;
+  return `translation missing: ${foreigner.locale}.${keyPath}`;
 };
 
 export default function(key, options) {

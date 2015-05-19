@@ -30,14 +30,17 @@ describe('Acceptance: `t` helper', function() {
     });
   });
 
-  it('should output the correct translation after changing the locale', function() {
+  it('should output the correct translation after changing the locale', function(done) {
     App.set('locale', 'fr');
 
     visit('/not-found')
     .visit('/').then(function() {
-      expect($('#key-lookup').text().trim()).to.equal('Ceci est une recherche de clé.');
+      Ember.run.next(function() {
+        expect($('#key-lookup').text().trim()).to.equal('Ceci est une recherche de clé.');
 
-      App.set('locale', 'en');
+        App.set('locale', 'en');
+        done();
+      });
     });
   });
 });

@@ -16,8 +16,6 @@ describe('Initializer', function() {
 
   it('should register the `t` helper', function() {
     initializer.initialize(container, application);
-
     expect(Ember.Handlebars.helpers.t).to.exist;
   });
-
 });

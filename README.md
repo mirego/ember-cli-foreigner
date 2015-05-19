@@ -54,20 +54,17 @@ To see how to write your locale file, see the [foreigner.js README](https://gith
 <p>{{t 'you_have_x_message' messageCount=messages.length}}</p>
 ```
 
-### Translating attributes of a component
-
-```js
-import Ember from 'ember';
-import TranslateableAttributes from 'ember-cli-foreigner/translateable-attributes';
-
-export default Ember.Component.extend(TranslateableAttributes, {
-  // component definition
-});
-```
-
-### Translating attributes of an Ember view
+### Translating attributes of an Ember helper
 
 Say you want to translate the `placeholder` attribute on the `input` helper.
+
+#### Since 1.0.0
+
+```hbs
+{{input placeholder=(t 'form.input_placeholder')}}
+```
+
+#### Versions prior to 1.0.0
 
 First, you have to include the `translateable-attributes` mixin on the `Ember.TextField` class:
 
