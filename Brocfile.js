@@ -1,9 +1,7 @@
-/* global require, module */
+// jshint node:true
 
 var EmberAddon = require('ember-cli/lib/broccoli/ember-addon');
 
-var app = new EmberAddon({
-  wrapInEval: false
-});
+var app = new EmberAddon();
 
 module.exports = app.toTree();

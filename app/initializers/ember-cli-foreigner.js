@@ -2,16 +2,16 @@ import Ember from 'ember';
 import t from '../helpers/t';
 import config from '../config/environment';
 
-var LOCALE_PREFIX = config.localePrefix ? config.localePrefix.replace(config.modulePrefix + '/', '') : 'locales';
+var LOCALE_PREFIX = config.localePrefix ? config.localePrefix.replace(`${config.modulePrefix}/`, '') : 'locales';
 
 var registerLibrary = function() {
-  if (Ember.libraries) {
-    Ember.libraries.register('ember-cli-foreigner', '0.3.0');
+  if (Ember.libraries && !Ember.libraries._getLibraryByName('ember-cli-foreigner')) {
+    Ember.libraries.register('ember-cli-foreigner', '1.0.0');
   }
 };
 
 var loadLocale = function(app, locale) {
-  foreigner.translations[locale] = app.__container__.lookupFactory(LOCALE_PREFIX + '/' + locale + ':main');
+  foreigner.translations[locale] = app.__container__.lookupFactory(`${LOCALE_PREFIX}/${locale}:main`);
 };
 
 var registerHelpers = function() {
@@ -20,13 +20,14 @@ var registerHelpers = function() {
 
 var createLocaleProperty = function(app) {
   app.reopen({
-    locale: Ember.computed(function(key, value) {
-      if (arguments.length > 1) {
+    locale: Ember.computed({
+      get: function() {
+        return foreigner.locale;
+      },
+      set: function(key, value) {
         loadLocale(app, value);
         foreigner.locale = value;
         return value;
-      } else {
-        return foreigner.locale;
       }
     })
   });
