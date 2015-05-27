@@ -2,11 +2,11 @@ import Ember from 'ember';
 import t from '../helpers/t';
 import config from '../config/environment';
 
-var LOCALE_PREFIX = config.localePrefix ? config.localePrefix.replace(`${config.modulePrefix}/`, '') : 'locales';
+const LOCALE_PREFIX = config.localePrefix ? config.localePrefix.replace(`${config.modulePrefix}/`, '') : 'locales';
 
 var registerLibrary = function() {
   if (Ember.libraries && !Ember.libraries._getLibraryByName('ember-cli-foreigner')) {
-    Ember.libraries.register('ember-cli-foreigner', '1.0.0');
+    Ember.libraries.register('ember-cli-foreigner', '1.1.0');
   }
 };
 

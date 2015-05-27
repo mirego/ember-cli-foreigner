@@ -6,6 +6,10 @@ var translationMissing = function(keyPath) {
 
 export default function(key, options) {
   options = options || {};
-  var attrs = options.hash;
-  return new Ember.Handlebars.SafeString(foreigner.t(key, attrs) || translationMissing(key));
+  let attrs = options.hash;
+  let translation = foreigner.t(key, attrs);
+
+  if (!translation) return new Ember.Handlebars.SafeString(translationMissing(key));
+  if (typeof translation === 'string') return new Ember.Handlebars.SafeString(translation);
+  return translation;
 }

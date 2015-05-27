@@ -21,4 +21,8 @@ describe('`t` helper', function() {
   it('should return a string stating that a translation is missing when it’s the case', function() {
     expect(t('unit_tests.inexistant_key').string).to.equal('translation missing: en.unit_tests.inexistant_key');
   });
+
+  it('should be able to return an array value', function() {
+    expect(t('unit_tests.weekdays')).to.deep.equal(['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday']);
+  });
 });
